@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>table style</title>
+    <style>
+    body{
+    	margin: 0;
+    }
+    .promotion-wrap .hide-sm{
+    	display: inline-block;
+    }
+    .promotion-wrap .show-sm{
+    	display: none;
+    }
+    .promotion-wrap {
+        margin: 0 auto;
+        padding: 20px;
+        width: 780px;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+        overflow: hidden;
+    }
+
+    .promotion-wrap .kv-banner {
+        margin: -20px -20px 0 -20px;
+    }
+
+    .promotion-wrap .kv-banner>img {
+        width: 100%;
+    }
+
+    .promotion-wrap h4 {
+        position: relative;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #0A427F;
+    }
+
+    .promotion-wrap h4 span {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-size: 12px;
+        color: #999;
+    }
+
+    .promotion-wrap h5{
+    	font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .promotion-wrap .table {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+        border-collapse: collapse;
+        border-radius: 5px;
+        color: #666;
+        font-size: 14px;
+        font-weight: normal;
+        overflow: hidden;
+        box-shadow: 0 0 0 1px #e8e8e8;
+    }
+
+    .promotion-wrap .table th,
+    .promotion-wrap .table td {
+        padding: 17px 10px;
+    }
+
+    .promotion-wrap .table th {
+        background: #0A427F;
+        font-weight: normal;
+        color: #fff;
+    }
+
+    .promotion-wrap .table th+th {
+        border-left: 1px solid #547ba6;
+    }
+
+    .promotion-wrap .table td+td {
+        border-left: 1px solid #e8e8e8;
+    }
+
+    .promotion-wrap .table tr:nth-child(even) {
+        background: #F2F5F8;
+    }
+
+    .promotion-wrap .table td[class*="no-"] {
+        font-size: 0;
+    }
+
+    .promotion-wrap .table td[class*="no-"]:before {
+        content: "";
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .promotion-wrap .table td.no-1:before {
+        background-image: url(images/icons/1st.svg);
+    }
+
+    .promotion-wrap .table td.no-2:before {
+        background-image: url(images/icons/2nd.svg);
+    }
+
+    .promotion-wrap .table td.no-3:before {
+        background-image: url(images/icons/3rd.svg);
+    }
+
+    @media (max-width: 768px) {
+    	.promotion-wrap .hide-sm{
+    		display: none;
+    	}
+    	.promotion-wrap .show-sm{
+    		display: block;
+    	}
+    	.promotion-wrap{
+    		box-sizing: border-box;
+    		width: 100%;
+    	}
+
+    	.promotion-wrap h4 span{
+    		position: static;
+    		line-height: 12px;
+    	}
+    	.promotion-wrap .table{
+    		font-size: 12px;
+    	}
+    }
+    </style>
+</head>
+
+<body>
+    <div class="promotion-wrap">
+        <div class="kv-banner">
+            <img src="https://10bo8810.com/img/57663/promotion 5-Europe-Leagues-Leaderboard-800X280.jpg" alt="">
+        </div>
+        <h4>欧洲足球五大联赛－积分排行榜<span><br>最后更新:2020年1月6日</span></h4>
+        <table class="table">
+            <tr>
+                <th>排名</th>
+                <th>用户名</th>
+                <th>积分</th>
+                <th>奖项</th>
+            </tr>
+            <tr>
+                <td class="no-1">1</td>
+                <td>53*****35</td>
+                <td>5</td>
+                <td>黃金金條 (10g)</td>
+            </tr>
+            <tr>
+                <td class="no-2">2</td>
+                <td>53*****35</td>
+                <td>5</td>
+                <td>大疆迷你空拍机</td>
+            </tr>
+            <tr>
+                <td class="no-3">3</td>
+                <td>53*****35</td>
+                <td>5</td>
+                <td>飞利浦电动牙刷组</td>
+            </tr>
+            <tr>
+                <td>4-10</td>
+                <td>53*****35</td>
+                <td>5</td>
+                <td>尤文图斯球队手表1只 <br>（不指定款）</td>
+            </tr>
+            <tr>
+                <td>11-20</td>
+                <td>53*****35</td>
+                <td>5</td>
+                <td>尤文图斯球队手表1只 <br>（不指定款）</td>
+            </tr>
+        </table>
+        <h5>贵宾年中积分战－单日流水与积分表</h5>
+        <table class="table">
+            <tr>
+                <th colspan="2">单日体育投注积分</th>
+                <th colspan="2">单日娱乐场投注积分</th>
+            </tr>
+            <tr>
+                <td>10,000 - 24,999 元</td>
+                <td>1 分</td>
+                <td>10,000 - 49,999 元</td>
+                <td>1 分</td>
+            </tr>
+            <tr>
+                <td>达50万以上后<span class="hide-sm">的</span><br class="show-sm">每50万元</td>
+                <td>＋1 分</td>
+                <td>达100万以上后<span class="hide-sm">的</span>每50万元</td>
+                <td>＋1 分</td>
+            </tr>
+        </table>
+        <h5>贵宾年中积分战－单日流水与积分表</h5>
+        <table class="table">
+            <tr>
+                <th>单日体育投注流水</th>
+                <th>单日体育投注积分</th>
+            </tr>
+            <tr>
+                <td>10,000 - 24,999 元</td>
+                <td>1 分</td>
+            </tr>
+            <tr>
+                <td>达50万以上后的每50万元</td>
+                <td>＋1 分</td>
+            </tr>
+        </table>
+        <table class="table">
+            <tr>
+                <th>单日娱乐场投注流水</th>
+                <th>单日娱乐场投注积分</th>
+            </tr>
+            <tr>
+                <td>10,000 - 24,999 元</td>
+                <td>1 分</td>
+            </tr>
+            <tr>
+                <td>达100万以上后的每50万元</td>
+                <td>＋1 分</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
