@@ -354,11 +354,11 @@
                     <div class="input-wrap">
                         <div class="input-box">
                             <label>微博帐号</label>
-                            <div class="input"><input type="text"></div>
+                            <div class="input"><input type="text" name="weibo"></div>
                         </div>
                         <div class="input-box">
                             <label>十博帐号</label>
-                            <div class="input"><input type="text"></div>
+                            <div class="input"><input type="text" name="ten-bet"></div>
                         </div>
                     </div>
                     <a class="btn btn-primary popup-open btn-award-random" data-link="event-2">提交</a>
@@ -436,44 +436,44 @@
     <script>
     $(function() {
 
-        // now = new Date('2020/01/18');
+        // now = new Date('2020/02/27');
         var game;
 
-        var game1 = new Date('2020/01/05 23:59:59');
-        var game2 = new Date('2020/01/12 23:59:59');
-        var game3 = new Date('2020/01/15 23:59:59');
-        var game4 = new Date('2020/01/19 23:59:59');
-        var game5 = new Date('2020/01/26 23:59:59');
+        var game1 = new Date('2020/02/02 23:59:59');
+        var game2 = new Date('2020/02/08 23:59:59');
+        var game3 = new Date('2020/02/15 23:59:59');
+        var game4 = new Date('2020/02/22 23:59:59');
+        var game5 = new Date('2020/02/26 23:59:59');
 
         if (now < game1) {
             console.log('game1');
             game = 1;
         } else if (now < game2) {
             console.log('game2');
-            $('.game-team img')[0].src = 'images/icon-team/CoqZUvqAgHMDkX32nDHM_w_96x96.png';
-            $('.game-team p')[0].innerText = '罗马';
-            $('.game-team img')[1].src = 'images/icon-team/108.png';
+            $('.game-team img')[0].src = 'images/icon-team/bJ94LzqlwjGcZ4CfiIAWRw_96x96.png';
+            $('.game-team p')[0].innerText = '维罗纳';
+            $('.game-team img')[1].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
             $('.game-team p')[1].innerText = '尤文图斯';
             game = 2;
         } else if (now < game3) {
             console.log('game3');
-            $('.game-team img')[0].src = 'images/icon-team/108.png';
+            $('.game-team img')[0].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
             $('.game-team p')[0].innerText = '尤文图斯';
-            $('.game-team img')[1].src = 'images/icon-team/92Aw_iasBENKmzvdpbTpHQ_96x96.png';
-            $('.game-team p')[1].innerText = '乌迪内斯';
+            $('.game-team img')[1].src = 'images/icon-team/l-MLi4bQw6AIEoIwZ8_Bew_96x96.png';
+            $('.game-team p')[1].innerText = '布雷西亚';
             game = 3;
         } else if (now < game4) {
             console.log('game4');
-            $('.game-team img')[0].src = 'images/icon-team/108.png';
-            $('.game-team p')[0].innerText = '尤文图斯';
-            $('.game-team img')[1].src = 'images/icon-team/Pr7ZXZlx34eEXdUMTkLvkw_96x96.png';
-            $('.game-team p')[1].innerText = '帕尔马';
+            $('.game-team img')[0].src = 'images/icon-team/5er6UwDBY6w6svoU_9JlyA_96x96.png';
+            $('.game-team p')[0].innerText = '斯帕尔';
+            $('.game-team img')[1].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
+            $('.game-team p')[1].innerText = '尤文图斯';
             game = 4;
         } else if (now < game5) {
             $('div.game-guess-box > p.game-time').text('同时猜对两队的分数，即为赢！');
-            $('.game-team img')[0].src = 'images/icon-team/PWRLYBJqlGrAAsKkUN6eng_96x96.png';
-            $('.game-team p')[0].innerText = '那不勒斯';
-            $('.game-team img')[1].src = 'images/icon-team/108.png';
+            $('.game-team img')[0].src = 'images/icon-team/SrKK55dUkCxe4mJsyshfCg_96x96.png';
+            $('.game-team p')[0].innerText = '里昂';
+            $('.game-team img')[1].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
             $('.game-team p')[1].innerText = '尤文图斯';
             game = 5;
             console.log('game5');
@@ -524,10 +524,9 @@
                     formData.append('phone', phone);
                     formData.append('ten_bet_id', ten_bet_id);
                     formData.append('game', game);
-
                     $.ajax({
                         type: 'POST',
-                        // url: 'https://bo88810.com/api/juventus-jan/event1',
+                        url: 'http://localhost:8000/api/juventus-feb/event1',
                         contentType: false,
                         processData: false,
                         data: formData,
@@ -535,7 +534,7 @@
                             if (data == 'succeeded') {
                                 $('#event-1 .step1').addClass('hide');
                                 $('#event-1 .step2').removeClass('hide');
-                                resetEven1();
+                                resetEvent1();
                             } else {
                                 if (data['ten_bet']) {
                                     $('#event-1 :input[name=ten_bet_id]').parent('div').addClass('input-error');
@@ -574,16 +573,20 @@
                     $('#event-2').removeClass("hide");
                     return;
                 }
+                var input = $('#event-2 :input').filter(function(){
+                    return this.value == ''
+                });
 
-                if ($('#event-2 :input').val() == "") {
-                    $('#event-2 .input').addClass('input-error');
+                if (input.length > 0) {
+                    $(input).parent().addClass('input-error');
                     $('#event-2 .event-text-error').text('亲~ 所有栏位都要填写唷!');
                 } else {
                     var formData = new FormData();
-                    formData.append('ten_bet_id', $('#event-2 :input').val());
+                    formData.append('ten_bet_id', $('#event-2 :input[name=ten-bet]').val());
+                    formData.append('weibo_id', $('#event-2 :input[name=weibo]').val());
                     $.ajax({
                         type: 'POST',
-                        // url: 'https://bo88810.com/api/juventus-jan/event2',
+                        url: 'http://localhost:8000/api/juventus-feb/event2',
                         data: formData,
                         contentType: false,
                         processData: false,
@@ -592,9 +595,13 @@
                                 $('.award-random ul li:first-child').text(data.prize);
                                 $('#event-2 .step1').addClass('hide');
                                 if (data.collections.length > 0) $('#event-2 .step2 .collections').html('已经收集到<div>' + data.collections + '</div>');
+                                else if ($('#event-2 .step2 .collections').length > 0) $('#event-2 .step2 .collections').remove();
                                 $('#event-2 .step2').removeClass('hide');
 
                             } else {
+                                if(data.weibo) {
+                                    $('#event-2 :input[name=weibo]').parent().addClass('input-error');
+                                }
                                 $('#event-2 .event-text-error').text(data.msg)
                             }
                         },
@@ -629,7 +636,7 @@
                     formData.append('ten_bet_id', $('#event-3 :input').val());
                     $.ajax({
                         type: 'POST',
-                        // url: 'https://bo88810.com/api/juventus-jan/event3',
+                        url: 'http://localhost:8000/api/juventus-feb/event3',
                         data: formData,
                         contentType: false,
                         processData: false,
@@ -669,6 +676,7 @@
         $(".popup-close").click(function() {
             $(".popup-wrap").addClass("hide");
             $(this).parent().find(".step1").removeClass("hide").siblings().addClass("hide");
+            $('#event-2 .input-error').removeClass('input-error');
             $('.event-text-error:not(#event-1 .event-text-error)').text('');
         });
 
@@ -678,7 +686,7 @@
         })
     });
 
-    function resetEven1() {
+    function resetEvent1() {
         $('#event-1 :input').val('');
         $('.game-guess-wrap :input').val('');
         $('.input-error').removeClass('input-error');
