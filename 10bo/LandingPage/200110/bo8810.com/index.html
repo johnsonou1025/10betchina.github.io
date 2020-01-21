@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="https://www.sbo10.com/favicon.ico">
-    <title>2月元宵到情人来 竞猜赢大奖，集字抢C罗！</title>
-    <meta name="description" content="竞猜尤文图斯赛事，抽包包、耳机、蓝牙喇叭等大奖；收集到指定文字，直接送球衣、红包等新春好礼！">
+    <title>【尤文贺元宵】竞猜赢大奖，集字抢C罗！</title>
+    <meta name="description" content="竞猜尤文图斯赛事，抽耳机、黄金、项鍊等大奖；收集指定文字，抢C罗球衣，还能趁机脱单！">
     <link rel="stylesheet" href="css/reset.min.css">
     <script src="js/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/style.css?1">
+    <link rel="stylesheet" href="css/style.css?3">
     <script>
         var now;
         $.ajax({
@@ -74,7 +74,7 @@
                                 <p>2月2日-2月8日</p>
                             </div>
                             <div class="tr"><img src="images/icon-team/bJ94LzqlwjGcZ4CfiIAWRw_96x96.png" alt="">维罗纳<span>2月9日</span></div>
-                            <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>22:00</span></div>
+                            <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>03:45</span></div>
                         </div>
                     </div>
                     <div class="gamelist-box">
@@ -94,7 +94,7 @@
                                 <p>2月16日-2月22日</p>
                             </div>
                             <div class="tr"><img src="images/icon-team/5er6UwDBY6w6svoU_9JlyA_96x96.png" alt="">斯帕尔<span>2月23日</span></div>
-                            <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>22:00</span></div>
+                            <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>01:00</span></div>
                         </div>
                     </div>
                     <div class="gamelist-box">
@@ -159,7 +159,7 @@
                                 <li>竞猜赢大奖活动从北京时间1月30日18:00－2月26日23:59为止。</li>
                             </ul>
                         </li>
-                        <li>参加竞猜活动，须在此页提交您的资料，并关注10Bet十博微博。</li>
+                        <li>参加活动，须在此页提交您的资料，并关注10Bet十博微博。</li>
                         <li>本活动的总分竞猜玩法为：玩家只要猜对两队的比分总和，即为赢！如：赛事结束后，两队的比分总和为3；在此情况下，玩家无论猜A队2分、B队1分，或A队1分、B队2分，都算赢。</li>
                         <li>在本活动开始前成为10Bet十博微博的铁粉，参加本次竞猜活动时，猜中获胜的球队，即可获得抽奖资格；如该竞猜赛事的结果为平局，所有竞猜该场赛事的铁粉无条件获胜，皆获得抽奖资格。</li>
                         <li>如因任何状况，导致某场赛事未能进行或取消，则所有竞猜该场赛事的玩家无条件获胜，所有参与该场竞猜的玩家都获得抽奖资格。</li>
@@ -189,9 +189,7 @@
     <div class="sponsership-section">
         <div class="container">
             <div class="sponsership-item">
-                <a href="javascript:void(0)" class="logo-juventus"></a>
-                <a href="javascript:void(0)" class="logo-DDI"></a>
-                <a href="javascript:void(0)" class="logo-blackburn"></a>
+                <a href="javascript:void(0)" class="logo-juventus-official"></a>
             </div>
         </div>
     </div>
@@ -277,7 +275,6 @@
                     <img class="icon-success" src="images/icon-success.svg" alt="">
                     <h4>亲，已提交您的竞猜资料了！</h4>
                     <p>记得关注微博，才算完成活动唷！</p>
-                    <p>页面下方还有集字抢C罗的活动，<br class="show-sm">别错过罗！</p>
                     <a class="btn btn-primary" href="https://www.weibo.com/6161325809" target="_blank">关注微博</a>
                 </div>
             </div>
@@ -467,7 +464,7 @@
                     formData.append('game', game);
                     $.ajax({
                         type: 'POST',
-                        url: 'http://localhost:8000/api/juventus-feb/event1',
+                        url: 'https://bo88810.com/api/juventus-feb/event1',
                         contentType: false,
                         processData: false,
                         data: formData,
@@ -527,7 +524,7 @@
                     formData.append('weibo_id', $('#event-2 :input[name=weibo]').val());
                     $.ajax({
                         type: 'POST',
-                        url: 'http://localhost:8000/api/juventus-feb/event2',
+                        url: 'https://bo88810.com/api/juventus-feb/event2',
                         data: formData,
                         contentType: false,
                         processData: false,
@@ -577,7 +574,7 @@
                     formData.append('ten_bet_id', $('#event-3 :input').val());
                     $.ajax({
                         type: 'POST',
-                        url: 'http://localhost:8000/api/juventus-feb/event3',
+                        url: 'https://bo88810.com/api/juventus-feb/event3',
                         data: formData,
                         contentType: false,
                         processData: false,

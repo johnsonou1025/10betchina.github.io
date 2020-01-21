@@ -931,6 +931,12 @@ h4 a {
     background-image: url(../images/logo-juventus.svg);
 }
 
+.logo-juventus-official {
+    width: 132px;
+    height: 68px;
+    background-image: url(../images/logo-juventus-official.svg);
+}
+
 .logo-blackburn {
     width: 131px;
     height: 43px;
