@@ -526,7 +526,7 @@
                     formData.append('game', game);
                     $.ajax({
                         type: 'POST',
-                        url: 'http://localhost:8000/api/juventus-feb/event1',
+                        url: '/api/juventus-feb/event1',
                         contentType: false,
                         processData: false,
                         data: formData,
@@ -586,7 +586,7 @@
                     formData.append('weibo_id', $('#event-2 :input[name=weibo]').val());
                     $.ajax({
                         type: 'POST',
-                        url: 'http://localhost:8000/api/juventus-feb/event2',
+                        url: '/api/juventus-feb/event2',
                         data: formData,
                         contentType: false,
                         processData: false,
@@ -636,7 +636,7 @@
                     formData.append('ten_bet_id', $('#event-3 :input').val());
                     $.ajax({
                         type: 'POST',
-                        url: 'http://localhost:8000/api/juventus-feb/event3',
+                        url: '/api/juventus-feb/event3',
                         data: formData,
                         contentType: false,
                         processData: false,
