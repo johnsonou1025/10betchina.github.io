@@ -1023,8 +1023,7 @@ body .vip-wrap {
 
 .vip-leaderboard {
     position: relative;
-    background: url(https://content.100b108.com/resp/vip/leaderboard-bg.png) #FFF5DF center bottom no-repeat;
-    background-size: cover;
+    background: url(../images/VIP-pattern-bg.png) #FFF5DF;
 }
 
 .vip-leaderboard:before {
@@ -1037,6 +1036,16 @@ body .vip-wrap {
     width: 100%;
     background-image: -webkit-gradient(linear, left bottom, left top, from(#A57729), to(#E5DB8A));
     background-image: linear-gradient(0deg, #A57729 0%, #E5DB8A 100%);
+}
+.vip-leaderboard:after{
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -3px;
+    height: 78px;
+    width: 100%;
+    background:#FFF5DF url(../images/bg-wave.png) center bottom no-repeat;
+    background-size: cover;
 }
 
 .vip-leaderboard .section-tt {
@@ -1057,7 +1066,7 @@ body .vip-wrap {
 .vip-leaderboard .grid {
     position: relative;
     margin: -5px;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .leader-top {
@@ -1267,10 +1276,6 @@ body .vip-wrap {
 }
 
 @media (max-width: 768px) {
-    .vip-contact {
-        margin-top: -50px;
-    }
-
     .vip-contact .contact-wrap {
         text-align: center;
     }
