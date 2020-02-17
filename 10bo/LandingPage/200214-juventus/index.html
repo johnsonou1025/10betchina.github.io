@@ -19,27 +19,6 @@
             <div class="info">QQ号：<span>510808190</span></div>
         </div>
     </div>
-    <script>
-        $(function() {
-            $(".right-side").click(function() {
-                $(this).toggleClass("active");
-            })
-            $(".popup-open").click(function(){
-                var _link = $(this).attr("data-link");
-                console.log(_link);
-                $("#"+_link).removeClass("hide");
-            })
-            $(".popup-close").click(function(){
-                $(".popup-wrap").addClass("hide");
-                $(this).parent().find(".step1").removeClass("hide").siblings().addClass("hide");
-            })
-            $(".popup-wrap .popup-info .btn").click(function(){
-                if($(this).parent().next().hasClass("hide")){
-                    $(this).parent().addClass("hide").next().removeClass("hide");
-                }
-            })
-        })
-    </script>
     <div class="top-section">
         <div class="container">
             <div class="icon-logo">
@@ -477,6 +456,29 @@
         </div>
     </div>
     <!-- popup terms end -->
+    <script>
+    $(function() {
+        $(".right-side").click(function() {
+            $(this).toggleClass("active");
+        })
+        $(".popup-open").click(function() {
+            var _link = $(this).attr("data-link");
+            console.log(_link);
+            $("#" + _link).removeClass("hide");
+            $("body").addClass("hidden");
+        })
+        $(".popup-close").click(function() {
+            $(".popup-wrap").addClass("hide");
+            $(this).parent().find(".step1").removeClass("hide").siblings().addClass("hide");
+            $("body").removeClass("hidden");
+        })
+        $(".popup-wrap .popup-info .btn").click(function() {
+            if ($(this).parent().next().hasClass("hide")) {
+                $(this).parent().addClass("hide").next().removeClass("hide");
+            }
+        })
+    })
+    </script>
 </body>
 
 </html>
