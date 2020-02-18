@@ -29,8 +29,16 @@
     <!-- nav -->
     <div class="nav">
         <div class="container">
+            <div class="nav-logo"><a href="index.html"><img src="images/10sports-logo-w.png" alt=""></a></div>
+            <div class="bar">
+                <i class="fa fa-bars"></i>
+                <i class="fa fa-times"></i>
+            </div>
             <ul>
-                <li><a href="index.html"><i class="fa fa-home"></i></a></li>
+                <li><a href="index.html">
+                        <i class="fa fa-home"></i>
+                    </a>
+                </li>
                 <li>
                     <a href="page-1.html">情报中心<i class="fa fa-angle-down"></i></a>
                     <div class="nav-second">
@@ -44,6 +52,14 @@
             </ul>
         </div>
     </div>
+    <script>
+        $(function(){
+            $(".nav .bar").click(function() {
+                $(this).toggleClass("bar-open")
+                $(".nav ul").toggleClass("active");
+            })
+        })
+    </script>
     <!-- nav end -->
     <div class="section">
         <div class="container">
