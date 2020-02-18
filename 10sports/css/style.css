@@ -386,8 +386,9 @@ img {
     cursor: pointer;
 }
 
-.nav ul li a:hover,
-.nav ul li.active a {
+.nav ul li>a:hover,
+.nav ul li.active>a,
+.nav-second a:hover {
     color: #fff;
     background: #dd3333;
 }
