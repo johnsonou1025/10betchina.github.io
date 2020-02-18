@@ -280,7 +280,7 @@
                 <h3>此时得分，你可以抽：</h3>
                 <br>
                 <h4>50元十博礼券</h4>
-                <h4>100元京东</h4>
+                <h4>100元京东卡</h4>
                 <h4>100元十博礼券</h4>
             </div>
         </div>
@@ -418,25 +418,25 @@
         })
         $(".popup-open").click(function() {
             var _link = $(this).attr("data-link");
-            console.log(_link);
             $("#" + _link).removeClass("hide");
             $("body").addClass("hidden");
         })
         $(".popup-close").click(function() {
-            $(".popup-wrap").addClass("hide");
-            $(this).parent().find(".step1").removeClass("hide").siblings().addClass("hide");
-            $("body").removeClass("hidden");
+            closePopup();
         })
         $(".popup-bg").click(function() {
-            $(".popup-wrap").addClass("hide");
-            $(this).parent().find(".step1").removeClass("hide").siblings().addClass("hide");
-            $("body").removeClass("hidden");
+            closePopup();
         })
         $(".popup-wrap .popup-info .btn").click(function() {
             if ($(this).parent().next().hasClass("hide")) {
                 $(this).parent().addClass("hide").next().removeClass("hide");
             }
         })
+        function closePopup(){
+            $(".popup-wrap").addClass("hide");
+            $(".popup-wrap .step1").removeClass("hide").siblings().addClass("hide");
+            $("body").removeClass("hidden");
+        }
     })
     </script>
 </body>
