@@ -1,0 +1,936 @@
+<!-- Responsive - Sponsorship Test CSS -->
+
+<style>
+
+/*-- basic --*/
+
+body .spon-wrap {
+    font-family: Arial, Helvetica, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    background: #F2F5F8;
+    overflow: hidden;
+}
+.spon-wrap * {
+    box-sizing: border-box;
+}
+.spon-wrap ol {
+    list-style-type: decimal;
+}
+
+.spon-wrap a {
+    text-decoration: none;
+}
+
+.spon-wrap h1 {
+    /*font-size: 64px;*/
+}
+
+.spon-wrap h2 {
+    /*font-size: 24px;*/
+}
+
+.spon-wrap h3 {
+    font-size: 24px;
+}
+
+.spon-wrap h4 {
+    font-size: 20px;
+}
+
+.spon-wrap h5 {
+    font-size: 16px;
+}
+
+.spon-wrap h6 {
+    font-size: 12px;
+}
+
+.spon-wrap .clear {
+    display: block;
+    clear: both;
+}
+
+.spon-wrap .hide {
+    display: none;
+}
+
+.spon-wrap .show {
+    display: block;
+}
+
+.spon-wrap .color-secondary {
+    color: #1DB955;
+}
+
+.spon-wrap .btn {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition: .3s;
+}
+
+.spon-wrap .btn:hover {
+    color: #fff;
+    background: #61ce8a;
+}
+
+.spon-wrap .btn:active {
+    color: #fff;
+    background: #199d47;
+}
+
+.spon-wrap .btn-primary {
+    height: 58px;
+    line-height: 58px;
+    background: #1DB955;
+    border-radius: 29px;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.spon-wrap .btn-secondary {
+    height: 44px;
+    line-height: 44px;
+    border: 1px solid #1DB954;
+    border-radius: 22px;
+    font-size: 15px;
+    color: #1DB954;
+}
+
+.spon-wrap .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 767px) {
+    .spon-wrap .container {
+        max-width: 720px;
+        min-width: 320px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .spon-wrap .container {
+        max-width: 1140px;
+    }
+}
+
+.spon-wrap .more {
+    display: inline-block;
+    padding-right: 18px;
+    color: #1DB954;
+    background: url(https://content.100b108.com/resp/sponsorship/images/icon/link-arrow.svg) no-repeat right center;
+    background-size: auto 70%;
+}
+
+.spon-wrap .radius5 {
+    border-radius: 5px;
+}
+
+.spon-slide .prev,
+.spon-slide .next {
+    position: absolute;
+    top: 50%;
+    width: 64px;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 32px;
+    color: #1DB954;
+    text-align: center;
+    z-index: 11;
+    transition: .3s;
+}
+
+.spon-slide .prev {
+    background: #fff url(https://content.100b108.com/resp/sponsorship/images/icon/link-arrow.svg) no-repeat center center;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    left: 0;
+}
+
+.spon-slide .next {
+    background: #fff url(https://content.100b108.com/resp/sponsorship/images/icon/link-arrow.svg) no-repeat center center;
+    right: 0;
+}
+
+/*-- grid system --*/
+.grid {
+    margin: 0 -15px;
+}
+
+.no-gutters {
+    margin: 0;
+}
+
+.no-gutters>.col,
+.no-gutters>[class*="col-"] {
+    padding: 0;
+}
+
+.grid:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+[class*="col-"] {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 20px 15px;
+}
+
+.col-1 {
+    max-width: 8.333333%;
+}
+
+.col-2 {
+    max-width: 16.666667%;
+}
+
+.col-3 {
+    max-width: 25%;
+}
+
+.col-4 {
+    max-width: 33.333333%;
+}
+
+.col-5 {
+    max-width: 41.666667%;
+}
+
+.col-6 {
+    max-width: 50%;
+}
+
+.col-7 {
+    max-width: 58.333333%;
+}
+
+.col-8 {
+    max-width: 66.666667%;
+}
+
+.col-9 {
+    max-width: 75%;
+}
+
+.col-10 {
+    max-width: 83.333333%;
+}
+
+.col-11 {
+    max-width: 91.666667%;
+}
+
+.col-12 {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .col-md-1 {
+        max-width: 8.333333%;
+    }
+
+    .col-md-2 {
+        max-width: 16.666667%;
+    }
+
+    .col-md-3 {
+        max-width: 25%;
+    }
+
+    .col-md-4 {
+        max-width: 33.333333%;
+    }
+
+    .col-md-5 {
+        max-width: 41.666667%;
+    }
+
+    .col-md-6 {
+        max-width: 50%;
+    }
+
+    .col-md-7 {
+        max-width: 58.333333%;
+    }
+
+    .col-md-8 {
+        max-width: 66.666667%;
+    }
+
+    .col-md-9 {
+        max-width: 75%;
+    }
+
+    .col-md-10 {
+        max-width: 83.333333%;
+    }
+
+    .col-md-11 {
+        max-width: 91.666667%;
+    }
+
+    .col-md-12 {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-sm-hide {
+        display: none;
+    }
+
+    .col-sm-1 {
+        max-width: 8.333333%;
+    }
+
+    .col-sm-2 {
+        max-width: 16.666667%;
+    }
+
+    .col-sm-3 {
+        max-width: 25%;
+    }
+
+    .col-sm-4 {
+        max-width: 33.333333%;
+    }
+
+    .col-sm-5 {
+        max-width: 41.666667%;
+    }
+
+    .col-sm-6 {
+        max-width: 50%;
+    }
+
+    .col-sm-7 {
+        max-width: 58.333333%;
+    }
+
+    .col-sm-8 {
+        max-width: 66.666667%;
+    }
+
+    .col-sm-9 {
+        max-width: 75%;
+    }
+
+    .col-sm-10 {
+        max-width: 83.333333%;
+    }
+
+    .col-sm-11 {
+        max-width: 91.666667%;
+    }
+
+    .col-sm-12 {
+        max-width: 100%;
+    }
+}
+
+/* block */
+.spon-wrap .section {
+    padding: 40px 0 20px;
+}
+
+.spon-wrap .kv {
+    position: relative;
+    height: 600px;
+    background: url(https://content.100b108.com/resp/sponsorship/images/juventus-video-image.jpg) #0A427F center center;
+    background-size: auto 100%;
+    overflow: hidden;
+}
+
+.spon-wrap .kv .kv-text {
+    position: absolute;
+    bottom: 0%;
+    left: 80%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.spon-wrap .kv .kv-text img {
+    max-width: 100%;
+}
+
+.blue-block{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background:#0a427f;
+    opacity: .5;
+    z-index: 1;
+}
+
+.spon-wrap .kv video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+}
+
+.spon-wrap h3 {
+    position: relative;
+}
+
+.spon-wrap h3 a {
+    position: absolute;
+    right: 0;
+}
+
+.spon-wrap .spon-team .item {
+    position: relative;
+    display: block;
+    padding: 20px 30px;
+    height: 230px;
+}
+
+.spon-wrap .spon-team .grid {
+    padding: 20px 0;
+    margin: 0;
+}
+
+.spon-wrap .spon-team h4 {
+    font-weight: bold;
+}
+
+.spon-wrap .spon-team h5 {
+    margin-top: 10px;
+}
+
+.spon-wrap .spon-team h5.more {
+    position: absolute;
+    bottom: 20px;
+}
+
+.spon-wrap .spon-team .juventus-team {
+    position: relative;
+    background: url(https://content.100b108.com/resp/sponsorship/images/spon/spon-team-juve-bg.jpg) #000 center top;
+    background-size: cover;
+    color: #fff;
+    border-radius: 5px 5px 0px 0px;
+}
+.spon-wrap .spon-team .juventus-team .logo-img {
+    height: 80px;
+}
+.spon-wrap .spon-team .juventus-team .logo-img img {
+    height: 100%;
+}
+.spon-wrap .spon-team .juventus-team .main-img {
+    position: absolute;
+    right: 20px;
+    bottom: -7px;
+    width: 65%;
+}
+.spon-wrap .spon-team .juventus-team .main-img img {
+    width: 100%;
+}
+
+.spon-wrap .spon-team .drogba-team {
+    background: #004481 url(https://content.100b108.com/resp/sponsorship/images/spon/spon-team-drogba.jpg) no-repeat right top;
+    background-size: auto 100%;
+    color: #fff;
+    border-radius: 0 0 0 5px;
+}
+
+.spon-wrap .spon-team .blackburn-team {
+    background: #C7ECFB url(https://content.100b108.com/resp/sponsorship/images/spon/spon-team-blackburn.jpg) no-repeat right top;
+    background-size: auto 100%;
+    color: #0758AF;
+    border-radius: 0 0 5px 0;
+}
+
+.spon-wrap .spon-news .item {
+    display: block;
+    position: relative;
+    padding: 194px 15px 15px;
+    background: #fff;
+    color: #999;
+    border-radius: 5px;
+    overflow: hidden;
+transition: .3s;
+}
+.spon-wrap .spon-news .item:hover{
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+}
+
+.spon-wrap .spon-news img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 194px;
+    width: auto;
+}
+
+.spon-wrap .spon-news .item h4 {
+    padding: 10px 0 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+.spon-wrap .spon-news .item h6 {
+    padding: 10px 0;
+    letter-spacing: 1px;
+}
+
+.spon-wrap .spon-photo .select-menu {
+    border-bottom: 1px solid#D8D8D8;
+    color: #999;
+    font-size: 16px;
+}
+
+.spon-wrap .spon-photo .select-menu li {
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.spon-wrap .spon-photo .select-menu li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    height: 3px;
+    background: #1DB954;
+    transition: .3s;
+}
+
+.spon-wrap .spon-photo .select-menu li.active {
+    color: #1DB954;
+}
+
+.spon-wrap .spon-photo .select-menu li.active:after {
+    right: 0;
+    left: 0;
+}
+
+.spon-wrap .spon-photo .prev {
+    -webkit-transform: translate(-50%, -50%) scaleX(-1);
+    transform: translate(-50%, -50%) scaleX(-1);
+    opacity: .3
+}
+
+.spon-wrap .spon-photo .next {
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+    opacity: 1;
+}
+
+.spon-wrap .spon-photo .photo-wrap.active .prev {
+    opacity: 1;
+}
+
+.spon-wrap .spon-photo .photo-wrap.active .next {
+    opacity: .3;
+}
+
+.spon-wrap .spon-photo .grid {
+    position: absolute;
+    width: 100%;
+    margin: 0px;
+    transition: .3s;
+}
+
+.spon-wrap .spon-photo .photo-wrap {
+    display: none;
+    padding: 30px 0;
+    position: relative;
+    height: 476px;
+    margin: 0 -10px;
+}
+
+.spon-wrap .spon-photo .photo-wrap.show {
+    display: block;
+}
+
+.spon-wrap .spon-photo .photo-wrap .grid.no1 {
+    left: 0%;
+    opacity: 1;
+}
+
+.spon-wrap .spon-photo .photo-wrap .grid.no2 {
+    left: 100%;
+    opacity: .3;
+}
+
+.spon-wrap .spon-photo .photo-wrap.active .grid.no1 {
+    left: -100%;
+    opacity: .3;
+}
+
+.spon-wrap .spon-photo .photo-wrap.active .grid.no2 {
+    left: 0%;
+    opacity: 1;
+}
+
+.spon-wrap .spon-photo .grid [class*="col-"] {
+    padding: 0px;
+}
+
+.spon-wrap .spon-photo .grid .col-6 .photo {
+    position: relative;
+    height: 396px;
+    margin: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-animation: scaleShow .3s forwards;
+    animation: scaleShow .3s forwards;
+}
+
+@-webkit-keyframes scaleShow {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleShow {
+    from {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/*.spon-wrap .spon-photo .show .grid .col-6 .photo{
+    transform: scale(1);
+    transition: .3s;
+}*/
+.spon-wrap .spon-photo .grid .col-6>.col-6 .photo {
+    height: 188px;
+}
+
+.spon-wrap .spon-photo .grid img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+    height: 100%;
+    transition: .3s;
+}
+
+.spon-wrap .spon-photo .grid img:hover {
+    -webkit-transform: translateX(-50%) scale(1.1);
+            transform: translateX(-50%) scale(1.1);
+}
+
+
+
+/*spon-popup*/
+.spon-popup {
+    /*display: none;*/
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .85);
+    opacity: 0;
+    transition: .3s;
+}
+
+.spon-popup.show {
+    z-index: 99;
+    visibility: visible;
+    opacity: 1;
+}
+
+.spon-popup .spon-slide .prev {
+    left: 50px;
+}
+
+.spon-popup .spon-slide .next {
+    right: 50px;
+}
+
+.spon-popup .spon-popup-photo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.spon-popup .btn-close-popup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    line-height: 50px;
+    font-size: 22px;
+    border-radius: 25px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.spon-popup .all-photo {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    padding: 5px;
+    width: 100%;
+    height: 10%;
+    background: #000;
+}
+
+.spon-popup .all-photo img {
+    display: inline-block;
+    margin: 10px;
+    height: 80%;
+}
+
+
+
+/* spon-news page */
+.spon-news-detail {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.spon-news-detail .spon-news {
+    display: inline-block;
+    max-width: 800px;
+    text-align: left;
+}
+
+.spon-news-detail .spon-news h3 {
+    text-align: center;
+}
+
+.spon-news-detail .spon-news .item {
+    padding-top: 350px;
+    margin: 25px 0;
+}
+
+.spon-news-detail .spon-news img {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    height: 350px;
+}
+
+.spon-news-detail .spon-news .spon-news-link {
+    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    color: #000;
+}
+
+.spon-news-detail .spon-news .spon-news-link h5+h5 {
+    margin-top: 5px;
+}
+
+.spon-news-detail .btn-goback {
+    display: inline-block;
+    min-width: 206px;
+    height: 58px;
+    line-height: 58px;
+    background: #1DB954;
+    border-radius: 29px;
+    color: #fff;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .spon-wrap .more {
+        padding-right: 12px;
+        background-size: auto 50%;
+    }
+
+    .spon-slide .prev,
+    .spon-slide .next {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .grid {
+        margin: 0 -5px;
+    }
+
+    [class*="col-"] {
+        padding: 10px 5px;
+    }
+
+    .spon-wrap h3 {
+        font-size: 18px;
+    }
+
+    .spon-wrap h3 h5 {
+        font-size: 12px;
+    }
+
+    .spon-wrap .kv {
+        height: 192px;
+    }
+
+    .spon-wrap .section {
+        padding: 10px 0;
+    }
+
+    .spon-wrap .spon-team .grid {
+        padding: 10px 0;
+    }
+
+    .spon-wrap .section.spon-team {
+        padding-top: 20px;
+    }
+
+    .spon-wrap .spon-team .item {
+        padding: 10px 15px;
+        height: 110px;
+    }
+
+    .spon-wrap .spon-team h4 {
+        font-size: 14px;
+    }
+
+    .spon-wrap .spon-team h5 {
+        font-size: 12px;
+        margin-top: 0;
+    }
+
+    .spon-wrap .spon-team h6 {
+        margin-top: -5px;
+    }
+
+    .spon-wrap .spon-team h5.more {
+        bottom: 10px;
+    }
+.spon-wrap .spon-team .drogba-team{
+        border-radius: 0;
+    }
+    .spon-wrap .spon-team .blackburn-team{
+        border-radius: 0 0 5px 5px;
+    }
+    .spon-wrap .spon-team .juventus-team .logo-img {
+        height: 40px;
+    }
+    .spon-wrap .spon-team .juventus-team .main-img {
+        right: 0;
+        width: 68%;
+    }
+
+    .spon-wrap .spon-news .item h4 {
+        font-size: 16px;
+    }
+
+    .spon-wrap .spon-news .item p {
+        font-size: 12px;
+    }
+
+    .spon-wrap .spon-photo .photo-wrap {
+        padding: 10px 0;
+        height: 228px;
+        overflow-y: hidden;
+    }
+
+    .spon-wrap .spon-photo .photo-wrap .photo-slide {
+        display: none;
+    }
+
+    .spon-wrap .spon-photo .photo-wrap .grid {
+        width: 300%;
+    }
+
+    .spon-wrap .spon-photo .photo-wrap .grid.no1 {
+        left: 0%;
+        opacity: 1;
+    }
+
+    .spon-wrap .spon-photo .photo-wrap .grid.no2 {
+        left: 300%;
+        opacity: 1;
+    }
+
+    .spon-wrap .spon-photo .photo-wrap .photo-wrap.active .grid.no1 {
+        left: 0%;
+        opacity: 1;
+    }
+
+    .spon-wrap .spon-photo .photo-wrap .photo-wrap.active .grid.no2 {
+        left: 300%;
+        opacity: 1;
+    }
+
+    .spon-wrap .spon-photo .grid img:hover {
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+    }
+
+    /*spon-popup*/
+    .spon-popup .spon-slide .prev {
+        left: 10px;
+    }
+
+    .spon-popup .spon-slide .next {
+        right: 10px;
+    }
+
+    /* spon-news page */
+    .spon-news-detail .spon-news .item {
+        padding-top: 197px;
+    }
+
+    .spon-news-detail .spon-news img {
+        height: 197px;
+    }
+
+}
+
+
+/*fix*/
+.sticky-bottom-menu a{
+    padding: 0 !important;
+}
+.footer-menu-holder {
+    clear: none !important;
+}
+html.IsDesktop #content-main .content-width {
+    max-width: 100%;
+}
+
+/*-- css end --*/
+
+</style>
