@@ -650,6 +650,11 @@ h4 a {
     background: url(../images/icon-error.svg) no-repeat center center;
 }
 
+.event-text-error {
+    display: none;
+    color: red;
+}
+
 @media (max-width: 768px) {
     .input-wrap .input-box label {
         display: block;
