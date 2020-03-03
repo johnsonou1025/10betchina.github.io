@@ -1,0 +1,973 @@
+/*-- basic --*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.fairies-wrap {
+    font-family: Arial, Helvetica, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    background: #F2F5F8;
+    padding-bottom: 70px;
+}
+
+.fairies-wrap * {
+    box-sizing: border-box;
+}
+
+.fairies-wrap ol {
+    list-style-type: decimal;
+}
+
+.fairies-wrap ul,
+.fairies-wrap li {
+    margin: 0;
+    padding: 0;
+}
+
+.fairies-wrap li {
+    list-style: none;
+}
+
+.fairies-wrap ul.disc {
+    list-style-type: disc;
+}
+
+.fairies-wrap a {
+    text-decoration: none;
+}
+
+.fairies-wrap h1 {
+    font-size: 32px;
+}
+
+.fairies-wrap h2 {
+    font-size: 28px;
+}
+
+.fairies-wrap h3 {
+    font-size: 24px;
+}
+
+.fairies-wrap h4 {
+    font-size: 18px;
+}
+
+.fairies-wrap h5 {
+    font-size: 16px;
+}
+
+.fairies-wrap h6 {
+    font-size: 12px;
+}
+
+.fairies-wrap p {
+    margin: 0;
+}
+
+.fairies-wrap .btn {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    border: none;
+    text-align: center;
+    background: transparent;
+    cursor: pointer;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.fairies-wrap .btn:hover {
+    color: #fff;
+    background: #61ce8a;
+}
+
+.fairies-wrap .btn:active {
+    color: #fff;
+    background: #199d47;
+}
+
+.fairies-wrap .btn-primary {
+    min-width: 120px;
+    height: 44px;
+    line-height: 44px;
+    background: #1DB955;
+    border-radius: 29px;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.fairies-wrap .btn-primary.btn-disable,
+.fairies-wrap .btn-primary.btn-disable:hover,
+.fairies-wrap .btn-primary.btn-disable:active {
+    background: #bbb;
+    color: #fff;
+}
+
+.fairies-wrap .btn-secondary {
+    height: 44px;
+    line-height: 44px;
+    border: 1px solid #1DB954;
+    border-radius: 22px;
+    color: #1DB954;
+    font-size: 16px;
+}
+
+.fairies-wrap .btn-secondary.btn-disable,
+.fairies-wrap .btn-secondary.btn-disable:hover,
+.fairies-wrap .btn-secondary.btn-disable:active {
+    border-color: #bbb;
+    color: #bbb;
+    background: #fff;
+    pointer-events: none;
+}
+
+.color-green {
+    color: #1DB954;
+}
+
+.color-yellow {
+    color: #FDD900;
+}
+
+.color-error {
+    color: #a00000;
+}
+
+.fairies-wrap .container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fairies-wrap .hide,
+.fairies-wrap .show-sm {
+    display: none;
+}
+
+.fairies-wrap .show,
+.fairies-wrap .hide-sm {
+    display: inline-block;
+}
+
+.fairies-wrap .clear {
+    display: block;
+    clear: both;
+}
+
+.fairies-wrap .hidden {
+    overflow: hidden;
+}
+
+@media (max-width: 767px) {
+    .fairies-wrap .container {
+        max-width: 720px;
+        min-width: 320px;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .fairies-wrap .h1-sm {
+        font-size: 28px;
+    }
+
+    .fairies-wrap .h2-sm {
+        font-size: 24px;
+    }
+
+    .fairies-wrap .h3-sm {
+        font-size: 18px;
+    }
+
+    .fairies-wrap .h4-sm {
+        font-size: 16px;
+    }
+
+    .fairies-wrap .h5-sm {
+        font-size: 12px;
+    }
+
+    .fairies-wrap .h6-sm {
+        font-size: 10px;
+    }
+
+    .fairies-wrap .show-sm {
+        display: block;
+    }
+
+    .fairies-wrap .hide-sm {
+        display: none;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .fairies-wrap .container {
+        max-width: 1140px;
+    }
+}
+
+/*-- basic end --*/
+/*-- grid system --*/
+.fairies-wrap .no-outside-gutters {
+    margin: -11px -15px;
+}
+
+.fairies-wrap .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.fairies-wrap .no-gutters>.col,
+.fairies-wrap .no-gutters>[class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.fairies-wrap [class*="col-"] {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 11px 15px;
+    box-sizing: border-box;
+}
+
+.fairies-wrap .col-1 {
+    max-width: 8.333333%;
+}
+
+.fairies-wrap .col-2 {
+    max-width: 16.666667%;
+}
+
+.fairies-wrap .col-3 {
+    max-width: 25%;
+}
+
+.fairies-wrap .col-4 {
+    max-width: 33.333333%;
+}
+
+.fairies-wrap .col-5 {
+    max-width: 41.666667%;
+}
+
+.fairies-wrap .col-6 {
+    max-width: 50%;
+}
+
+.fairies-wrap .col-7 {
+    max-width: 58.333333%;
+}
+
+.fairies-wrap .col-8 {
+    max-width: 66.666667%;
+}
+
+.fairies-wrap .col-9 {
+    max-width: 75%;
+}
+
+.fairies-wrap .col-10 {
+    max-width: 83.333333%;
+}
+
+.fairies-wrap .col-11 {
+    max-width: 91.666667%;
+}
+
+.fairies-wrap .col-12 {
+    max-width: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .fairies-wrap .no-outside-gutters {
+        margin: -11px -5px;
+    }
+
+    .fairies-wrap [class*="col-"] {
+        padding: 5px;
+    }
+
+    .fairies-wrap .col-sm-1 {
+        max-width: 8.333333%;
+    }
+
+    .fairies-wrap .col-sm-2 {
+        max-width: 16.666667%;
+    }
+
+    .fairies-wrap .col-sm-3 {
+        max-width: 25%;
+    }
+
+    .fairies-wrap .col-sm-4 {
+        max-width: 33.333333%;
+    }
+
+    .fairies-wrap .col-sm-5 {
+        max-width: 41.666667%;
+    }
+
+    .fairies-wrap .col-sm-6 {
+        max-width: 50%;
+    }
+
+    .fairies-wrap .col-sm-7 {
+        max-width: 58.333333%;
+    }
+
+    .fairies-wrap .col-sm-8 {
+        max-width: 66.666667%;
+    }
+
+    .fairies-wrap .col-sm-9 {
+        max-width: 75%;
+    }
+
+    .fairies-wrap .col-sm-10 {
+        max-width: 83.333333%;
+    }
+
+    .fairies-wrap .col-sm-11 {
+        max-width: 91.666667%;
+    }
+
+    .fairies-wrap .col-sm-12 {
+        max-width: 100%;
+    }
+
+}
+
+/*-- grid system end --*/
+
+/*-- popup wrap --*/
+.fairies-wrap .popup-open {
+    cursor: pointer;
+}
+
+.fairies-wrap .popup-wrap {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    opacity: 0;
+}
+
+.fairies-wrap .popup-wrap.active {
+    display: block;
+    animation: popupOpen .3s forwards;
+}
+
+@keyframes popupOpen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fairies-wrap .popup-wrap .popup-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+}
+
+.fairies-wrap .popup-wrap .popup-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    background: #fff;
+    color: #111;
+    text-align: center;
+    z-index: 1;
+}
+
+.fairies-wrap .popup-wrap .popup-box img {
+    display: block;
+    max-height: 100vh;
+    max-width: 100vw;
+}
+
+.fairies-wrap .popup-close {
+    display: inline-block;
+    position: absolute;
+    top: -72px;
+    right: 0px;
+    width: 44px;
+    height: 44px;
+    padding: 15px;
+    border-radius: 22px;
+    background-color: #11447d;
+    cursor: pointer;
+    z-index: 99;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
+
+.fairies-wrap .popup-close:after {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url(../images/Icon/close.svg) center center no-repeat;
+}
+
+.fairies-wrap .popup-close:hover {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.fairies-wrap .slider-photos {
+    position: relative;
+}
+
+.fairies-wrap .slider-photos .slider-prev,
+.fairies-wrap .slider-photos .slider-next {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+}
+
+.fairies-wrap .slider-photos .slider-next {
+    right: 0;
+    left: auto;
+}
+
+.fairies-wrap .slider-photos .slider-prev:before,
+.fairies-wrap .slider-photos .slider-next:before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 50%;
+    transform: translateY(-50%) scale(-1);
+    width: 64px;
+    height: 64px;
+    background: #fff url(https://content.100b108.com/resp/sponsorship/images/icon/link-arrow.svg) no-repeat center center;
+    border-radius: 32px;
+    color: #1DB954;
+    text-align: center;
+    z-index: 11;
+    opacity: 0;
+    transition: .3s;
+}
+
+.fairies-wrap .slider-photos .slider-next:before {
+    left: auto;
+    right: -32px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.fairies-wrap .slider-photos .slider-prev:hover:before,
+.fairies-wrap .slider-photos .slider-next:hover:before {
+    opacity: 1;
+}
+
+.fairies-wrap .slider-photos li {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: .3s;
+    visibility: hidden;
+}
+
+.fairies-wrap .slider-photos li.active {
+    position: static;
+    opacity: 1;
+    z-index: 2;
+    visibility: visible;
+}
+
+@media (max-width: 768px) {
+    .fairies-wrap .popup-wrap .popup-box {
+        width: 100%;
+    }
+
+    .fairies-wrap .slider-photos .slider-prev:hover:before,
+    .fairies-wrap .slider-photos .slider-next:hover:before {
+        opacity: 0;
+    }
+}
+
+/*-- popup wrap end --*/
+
+/*-- fairies section --*/
+.fairies-section {
+    margin: 70px 0;
+}
+
+.fairies-section h3 {
+    margin-bottom: -10px;
+}
+
+@media(max-width:768px) {
+    .fairies-section {
+        margin: 10px 0;
+    }
+}
+
+/*-- fairies section end --*/
+
+/*-- fairies nav --*/
+.fairies-nav {
+    background: #053060;
+}
+
+.fairies-nav-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 1632px;
+    background: #053060;
+}
+
+.fairies-nav-inner {
+    position: relative;
+    height: 182px;
+    max-width: 1632px;
+    margin: 0 auto;
+    padding: 15px 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.fairies-nav-inner:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fairies-nav ul {
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    white-space: nowrap;
+    transition: .3s;
+}
+
+.fairies-nav li {
+    display: inline-block;
+    width: 100px;
+    margin: 0 15px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+.fairies-nav li .fairies-logo {
+    position: relative;
+    bottom: 0px;
+    transition: .1s;
+}
+
+.fairies-nav li:hover .fairies-logo,
+.fairies-nav li.active .fairies-logo {
+    bottom: 3px;
+    animation: scale .3s;
+}
+
+@keyframes scale {
+    0 {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(-1);
+    }
+
+    100% {
+        transform: scaleX(1);
+
+    }
+}
+
+.fairies-wrap .fairies-nav li .fairies-logo:before {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: -3px;
+    width: 102px;
+    height: 102px;
+    border: 2px solid #1DB954;
+    border-radius: 100%;
+    z-index: 0;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: .3s;
+}
+
+.fairies-wrap .fairies-nav li .fairies-logo img {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.fairies-wrap .fairies-nav li:hover,
+.fairies-wrap .fairies-nav li.active {
+    color: #1DB954;
+}
+
+.fairies-wrap .fairies-nav li:hover .fairies-logo:before,
+.fairies-wrap .fairies-nav li.active .fairies-logo:before {
+    opacity: 1;
+    transform: scale(1);
+}
+.fairies-wrap .fairies-nav li.disable{
+    opacity: .8;
+}
+
+.fairies-wrap .fairies-nav li.disable:hover{
+    color: #fff;
+}
+.fairies-wrap .fairies-nav li.disable:hover .fairies-logo{
+    bottom: 0px;
+    animation: none;
+}
+.fairies-wrap .fairies-nav li.disable:hover .fairies-logo:before {
+    display: none;
+}
+
+
+@media(max-width: 768px) {
+    .fairies-nav-container {
+        padding: 0;
+    }
+
+    .fairies-nav-inner {
+        height: 128px;
+        padding: 6px 0;
+    }
+
+    .fairies-nav li {
+        width: 66px;
+        margin: 0 10px;
+    }
+
+    .fairies-wrap .fairies-nav li .fairies-logo:before {
+        width: 68px;
+        height: 68px;
+    }
+}
+
+/*-- fairies nav end --*/
+
+/*-- fairies kv --*/
+.fairies-kv {
+    padding-top: 30px;
+    background: #053060;
+}
+
+.fairies-kv ul {
+    position: relative;
+
+}
+
+.fairies-kv li {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 520px;
+    background: url(../images/KV/BG/7.jpg) no-repeat center center;
+    background-size: auto 120%;
+    text-align: center;
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.fairies-kv li.active {
+    position: static;
+    background-size: auto 100%;
+    opacity: 1;
+}
+
+.fairies-kv li:nth-child(1) {
+    background-image: url(../images/KV/BG/1.jpg);
+}
+
+.fairies-kv li:nth-child(2) {
+    background-image: url(../images/KV/BG/2.jpg);
+}
+
+.fairies-kv li .kv-item {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.fairies-kv li img.fairies-girl {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 30px;
+    opacity: 0;
+}
+
+.fairies-kv li.active img.fairies-girl {
+    animation: fairies-kv 1s forwards;
+    animation-delay: .5s;
+}
+
+@keyframes fairies-kv {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fairies-kv .fairies-intro {
+    display: inline-block;
+    width: 356px;
+    color: #fff;
+    line-height: 28px;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.fairies-kv .fairies-intro .intro-title {
+    padding-left: 135px;
+    background: url(../images/Icon/Fairies-logo.png) no-repeat left center;
+    background-size: 125px auto;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: normal;
+}
+
+.fairies-kv .fairies-intro .intro-content {
+    opacity: 0;
+}
+
+.fairies-kv .fairies-intro .hr {
+    margin-top: 10px;
+    height: 1px;
+    border-top: 2px dotted #cccccc;
+    overflow: hidden;
+}
+
+@media(min-width:768px) {
+    .fairies-kv li.active .fairies-intro .intro-title {
+        transform: translateY(100%);
+        opacity: 0;
+        animation: introTitle 1.5s forwards;
+        animation-delay: .5s;
+    }
+
+    @keyframes introTitle {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        50% {
+            transform: translateY(100%);
+            opacity: 1;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .fairies-kv li.active .fairies-intro .intro-content {
+        animation: introContent 1s forwards;
+        animation-delay: 1.3s;
+    }
+
+    @keyframes introContent {
+        from {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+
+    .fairies-kv li {
+        width: 100%;
+        height: 156px;
+        margin-bottom: 258px;
+    }
+
+    .fairies-kv li img {
+        width: 220px;
+    }
+
+    .fairies-kv li .kv-item {
+        width: 100%;
+        overflow: visible;
+    }
+
+    .fairies-kv .fairies-intro {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 10px;
+        width: 100%;
+        border-bottom: 1px solid #eaeaea;
+        background: #fff;
+        color: #666;
+        font-size: 12px;
+    }
+
+    .fairies-kv .fairies-intro .intro-title {
+        padding-left: 63px;
+        background-image: url(../images/Icon/Fairies-logo-b.png);
+        background-size: 53px auto;
+        font-size: 18px;
+        color: #000;
+    }
+
+    .fairies-kv .fairies-intro .intro-content {
+        opacity: 1;
+    }
+}
+
+/*-- fairies kv end --*/
+
+
+
+/*-- fairies photos --*/
+.fairies-photos{
+    opacity: 0;
+}
+.fairies-photos.fadeIn {
+    animation: photoFadeIn .5s forwards;
+    animation-delay: 1s;
+}
+@keyframes photoFadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.fairies-photos:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fairies-photos .photos-img {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fairies-photos .photos-img:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 18px;
+    background: transparent url(../images/Icon/Fairies-logo.png) no-repeat center center;
+    background-size: auto 100%;
+    z-index: 1;
+}
+
+.fairies-photos .photos-img img {
+    display: block;
+    width: 100%;
+    transition: .3s;
+}
+
+.fairies-photos .photos-img:hover img {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {}
+
+/*-- fairies photos end --*/
+
+/*-- promo wrap --*/
+.fairies-promotions {
+    margin: -11px -15px;
+}
+
+.fairies-promotions:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.fairies-promotions .item {
+    padding: 0px 15px 20px;
+    height: auto;
+    min-height: 260px;
+    text-align: left;
+    background: #fff;
+    color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
+    overflow: hidden;
+}
+
+.fairies-promotions .item .img {
+    margin: 0 -15px;
+}
+
+.fairies-promotions .item .img>img {
+    width: 100%;
+    height: auto;
+}
+
+.fairies-promotions .item .item-title {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+
+.fairies-promotions .item p {
+    opacity: .8;
+}
+
+.fairies-promotions .item .btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .fairies-promotions {
+        margin: -11px -5px;
+    }
+}
+
+
+
+
+/*-- css end --*/
