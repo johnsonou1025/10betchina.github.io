@@ -775,6 +775,46 @@ body {
     background-image: url(../images/KV/BG/2.jpg);
 }
 
+.fairies-kv li:nth-child(3) {
+    background-image: url(../images/KV/BG/3.jpg);
+}
+
+.fairies-kv li:nth-child(4) {
+    background-image: url(../images/KV/BG/4.jpg);
+}
+
+.fairies-kv li:nth-child(5) {
+    background-image: url(../images/KV/BG/5.jpg);
+}
+
+.fairies-kv li:nth-child(6) {
+    background-image: url(../images/KV/BG/6.jpg);
+}
+
+.fairies-kv li:nth-child(7) {
+    background-image: url(../images/KV/BG/7.jpg);
+}
+
+.fairies-kv li:nth-child(8) {
+    background-image: url(../images/KV/BG/8.jpg);
+}
+
+.fairies-kv li:nth-child(9) {
+    background-image: url(../images/KV/BG/9.jpg);
+}
+
+.fairies-kv li:nth-child(10) {
+    background-image: url(../images/KV/BG/10.jpg);
+}
+
+.fairies-kv li:nth-child(11) {
+    background-image: url(../images/KV/BG/11.jpg);
+}
+
+.fairies-kv li:nth-child(12) {
+    background-image: url(../images/KV/BG/12.jpg);
+}
+
 .fairies-kv li .kv-item {
     position: absolute;
     bottom: 0;
