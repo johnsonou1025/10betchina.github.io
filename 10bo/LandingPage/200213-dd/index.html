@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="https://www.sbo10.com/favicon.ico">
-    <title>欢庆德罗巴3月生日，重现切尔西11号－魔兽传奇</title>
+    <title>【化身德罗巴】重现切尔西11号的魔兽传奇！</title>
+    <meta name="description" content="当年欧冠决赛，德罗巴以关键点球助蓝军夺冠；现在换你助切尔西获胜，获得优渥奖赏！">
     <link rel="stylesheet" href="css/reset.min.css">
     <script src="js/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
@@ -36,7 +37,7 @@
     <div class="container">
         <h2 class="section-title">化身德罗巴<span class="hide-sm">，</span><br class="show-sm">帮切尔西赢得关键胜利！</h2>
         <h5 class="weibo-num">已<span id="forward">-</span>人转发微博，切尔西已增加<span id="balls">-</span>球</h5>
-        <h6>每10人转发<a class="color-green" href="">这篇微博</a>，切尔西增加1颗进球至比赛赛果。</h6>
+        <h6>每10人转发<a class="color-green" href="https://www.weibo.com/7293925177/IvZW58nL0?from=page_1005057293925177_profile&wvr=6&mod=weibotime" target="_blank">这篇微博</a>，切尔西增加1颗进球至比赛赛果。</h6>
         <div class="game-guess-wrap">
             <div class="game-guess-box">
                 <div class="game-team">
@@ -110,11 +111,11 @@
             <div class="col-4 col-sm-12">
                 <div class="item">
                     <div class="img">
-                        <img src="https://www.108b108.com/img/57024/banner-sport-welcome-bonus%20(1).jpg" alt="">
+                        <img src="images/promo-weekly-rebate-800x280.jpg" alt="">
                     </div>
                     <h4 class="item-title">欢庆德罗巴生日</h4>
-                    <p>每日登录十博抽礼券，最大奖送笔电！</p>
-                    <a class="btn btn-primary" href="https://www.10bo16.com/promotions/offers/login-prize-challenge/"
+                    <p>汗水不白流，每日1%返水助你获胜！</p>
+                    <a class="btn btn-primary" href="https://www.10bo16.com/promotions/offers/weekly-rebate/"
                        target="_blank">前往活动</a>
                 </div>
             </div>
@@ -172,7 +173,7 @@
                         <li>活动时间：在北京时间3月2日18:00－3月18日23:59:59为止。</li>
                         <li>参加活动即代表您同意本页的规则与条款。</li>
                         <li>
-                            参加活动须在此页提交您的资料，并关注<a class="color-green" href="https://www.weibo.com/7293925177">德罗巴官博。</a>
+                            参加活动须在此页提交您的资料，并关注<a class="color-green" href="https://www.weibo.com/7293925177" target="_blank">德罗巴官博。</a>
                         </li>
                         <li>
                             在本活动中，玩家须点击支持拜仁慕尼黑或支持切尔西。
@@ -197,7 +198,7 @@
                             </ul>
                         </li>
                         <li>
-                            本次活动将于北京时间3月20日抽奖，且于3月21日在<a class="color-green" href="https://www.weibo.com/7293925177">德罗巴官博</a>公布所有得奖用户的微博昵称，并交由十博客服团队联系。
+                            本次活动将于北京时间3月20日抽奖，且于3月21日在<a class="color-green" href="https://www.weibo.com/7293925177" target="_blank">德罗巴官博</a>公布所有得奖用户的微博昵称，并交由十博客服团队联系。
                         </li>
                         <li>
                             本活动同一人限参加1次，如有同一人用多种帐号参加，为对其他会员公平、以及维持活动的公正诚实，十博拥有否决其领奖的权利。
@@ -249,8 +250,8 @@
                     </form>
                 </div>
                 <a class="btn btn-primary popup-open btn-award-random">提交</a>
-                <p class="event-text-terms">还未成为10Bet十博会员吗？<a class="color-green" href="http://wl10bet1000.adsrv.eacdn.com/C.ashx?btag=a_2005902b_2814c_&affid=2002867&siteid=2005902&adid=2814&c=">点击注册</a></p>
-                <h6 class="event-text-error">帐号已有人使用罗～</h6>
+                <p class="event-text-terms">还未成为10Bet十博会员吗？<a class="color-green" href="http://wl10bet1000.adsrv.eacdn.com/C.ashx?btag=a_2005902b_2814c_&affid=2002867&siteid=2005902&adid=2814&c=" target="_blank">点击注册</a></p>
+                <h6 class="event-text-error">亲～ 表格里有重复或未填写的信息唷！～</h6>
             </div>
             <div class="step2 hide">
                 <div class="text-award">-</div>
@@ -265,7 +266,7 @@
 <script>
     $(function () {
         // var hostname = 'http://localhost:8000';
-        var hostname = 'http://18.162.42.21/';
+        var hostname = 'https://2019wsd.com';
         var team;
         $(".right-side").click(function () {
             $(this).toggleClass("active");
@@ -288,8 +289,9 @@
         $(".popup-wrap .popup-info .btn").click(function () {
             if ($(this).parent().next().hasClass("hide")) {
                 let form = new FormData($('#submit-form')[0]);
+                form.append('vote', team);
                 $.ajax({
-                    url: hostname + '/players/',
+                    url: hostname + '/dd_players/',
                     method: 'POST',
                     data: form,
                     contentType: false,
@@ -317,7 +319,7 @@
         })
 
         $.ajax({
-            url: hostname + '/config/',
+            url: hostname + '/dd_config/',
             method: 'GET',
             success: function(data) {
                 console.log(data);

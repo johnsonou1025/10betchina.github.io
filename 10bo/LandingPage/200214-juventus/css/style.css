@@ -119,6 +119,7 @@ h4 a {
 
 .color-error {
     color: #a00000;
+    display: none;
 }
 
 .container {
