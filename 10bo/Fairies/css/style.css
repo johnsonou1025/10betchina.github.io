@@ -836,28 +836,6 @@ body {
     font-size: 40px;
     font-weight: bold;
     line-height: normal;
-    -webkit-animation: introTitleFadeOut .5s forwards;
-    animation: introTitleFadeOut .5s forwards;
-}
-
-@-webkit-keyframes introTitleFadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes introTitleFadeOut {
-    0% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
 }
 
 .fairies-kv .fairies-intro .intro-content {
@@ -872,6 +850,31 @@ body {
 }
 
 @media(min-width:768px) {
+    .fairies-kv .fairies-intro .intro-title {
+        -webkit-animation: introTitleFadeOut .5s forwards;
+        animation: introTitleFadeOut .5s forwards;
+    }
+
+    @-webkit-keyframes introTitleFadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes introTitleFadeOut {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
     .fairies-kv li.active .fairies-intro .intro-title {
         -webkit-transform: translateY(100%);
         transform: translateY(100%);
