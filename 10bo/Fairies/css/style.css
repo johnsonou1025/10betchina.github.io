@@ -289,6 +289,10 @@ body {
         margin: -11px -5px;
     }
 
+    .fairies-wrap .no-gutters+.no-gutters {
+        margin-top: -10px;
+    }
+
     .fairies-wrap [class*="col-"] {
         padding: 5px;
     }
@@ -363,7 +367,18 @@ body {
 
 .fairies-wrap .popup-wrap.active {
     display: block;
+    -webkit-animation: popupOpen .3s forwards;
     animation: popupOpen .3s forwards;
+}
+
+@-webkit-keyframes popupOpen {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes popupOpen {
@@ -392,7 +407,6 @@ body {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     border-radius: 5px;
-    background: #fff;
     color: #111;
     text-align: center;
     z-index: 1;
@@ -400,6 +414,7 @@ body {
 
 .fairies-wrap .popup-wrap .popup-box img {
     display: block;
+    padding: 72px 32px 32px;
     max-height: 100vh;
     max-width: 100vw;
 }
@@ -407,8 +422,8 @@ body {
 .fairies-wrap .popup-close {
     display: inline-block;
     position: absolute;
-    top: -72px;
-    right: 0px;
+    top: 0px;
+    right: 32px;
     width: 44px;
     height: 44px;
     padding: 15px;
@@ -455,8 +470,9 @@ body {
 .fairies-wrap .slider-photos .slider-next:before {
     content: "";
     position: absolute;
-    left: -32px;
+    left: 0px;
     top: 50%;
+    -webkit-transform: translateY(-50%) scale(-1);
     transform: translateY(-50%) scale(-1);
     width: 64px;
     height: 64px;
@@ -466,13 +482,15 @@ body {
     text-align: center;
     z-index: 11;
     opacity: 0;
+    -webkit-transition: .3s;
     transition: .3s;
 }
 
 .fairies-wrap .slider-photos .slider-next:before {
     left: auto;
-    right: -32px;
+    right: 0px;
     top: 50%;
+    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
 
@@ -486,6 +504,7 @@ body {
     top: 0;
     opacity: 0;
     z-index: 1;
+    -webkit-transition: .3s;
     transition: .3s;
     visibility: hidden;
 }
@@ -502,9 +521,9 @@ body {
         width: 100%;
     }
 
-    .fairies-wrap .slider-photos .slider-prev:hover:before,
-    .fairies-wrap .slider-photos .slider-next:hover:before {
-        opacity: 0;
+    .fairies-wrap .slider-photos .slider-prev:before,
+    .fairies-wrap .slider-photos .slider-next:before {
+        opacity: 1;
     }
 }
 
@@ -563,6 +582,7 @@ body {
     left: 0;
     display: inline-block;
     white-space: nowrap;
+    -webkit-transition: .3s;
     transition: .3s;
 }
 
@@ -578,25 +598,49 @@ body {
 .fairies-nav li .fairies-logo {
     position: relative;
     bottom: 0px;
+    margin-bottom: 5px;
+    -webkit-transition: .1s;
     transition: .1s;
 }
 
 .fairies-nav li:hover .fairies-logo,
 .fairies-nav li.active .fairies-logo {
     bottom: 3px;
+    -webkit-animation: scale .3s;
     animation: scale .3s;
 }
 
-@keyframes scale {
+@-webkit-keyframes scale {
     0 {
+        -webkit-transform: scaleX(1);
         transform: scaleX(1);
     }
 
     50% {
+        -webkit-transform: scaleX(-1);
         transform: scaleX(-1);
     }
 
     100% {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+
+    }
+}
+
+@keyframes scale {
+    0 {
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+
+    50% {
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+
+    100% {
+        -webkit-transform: scaleX(1);
         transform: scaleX(1);
 
     }
@@ -613,7 +657,9 @@ body {
     border-radius: 100%;
     z-index: 0;
     opacity: 0;
+    -webkit-transform: scale(0.9);
     transform: scale(0.9);
+    -webkit-transition: .3s;
     transition: .3s;
 }
 
@@ -631,23 +677,42 @@ body {
 .fairies-wrap .fairies-nav li:hover .fairies-logo:before,
 .fairies-wrap .fairies-nav li.active .fairies-logo:before {
     opacity: 1;
+    -webkit-transform: scale(1);
     transform: scale(1);
 }
-.fairies-wrap .fairies-nav li.disable{
+
+.fairies-wrap .fairies-nav li.disable {
     opacity: .8;
 }
 
-.fairies-wrap .fairies-nav li.disable:hover{
+.fairies-wrap .fairies-nav li.disable:hover {
     color: #fff;
 }
-.fairies-wrap .fairies-nav li.disable:hover .fairies-logo{
+
+.fairies-wrap .fairies-nav li.disable:hover .fairies-logo {
     bottom: 0px;
+    -webkit-animation: none;
     animation: none;
 }
+
 .fairies-wrap .fairies-nav li.disable:hover .fairies-logo:before {
     display: none;
 }
 
+.fairies-wrap .fairies-nav li.disable p:last-child {
+    visibility: hidden;
+    position: relative;
+}
+
+.fairies-wrap .fairies-nav li.disable p:last-child:after {
+    visibility: visible;
+    content: "敬请期待";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
 
 @media(max-width: 768px) {
     .fairies-nav-container {
@@ -692,7 +757,8 @@ body {
     background-size: auto 120%;
     text-align: center;
     opacity: 0;
-    transition: 1.5s;
+    -webkit-transition: 1s;
+    transition: 1s;
 }
 
 .fairies-kv li.active {
@@ -713,6 +779,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 50%;
+    -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     white-space: nowrap;
     overflow: hidden;
@@ -727,8 +794,20 @@ body {
 }
 
 .fairies-kv li.active img.fairies-girl {
+    -webkit-animation: fairies-kv 1s forwards;
     animation: fairies-kv 1s forwards;
+    -webkit-animation-delay: .5s;
     animation-delay: .5s;
+}
+
+@-webkit-keyframes fairies-kv {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fairies-kv {
@@ -752,11 +831,33 @@ body {
 
 .fairies-kv .fairies-intro .intro-title {
     padding-left: 135px;
-    background: url(../images/Icon/Fairies-logo.png) no-repeat left center;
+    background: url(../images/Icon/Fairies-logo.svg) no-repeat left center;
     background-size: 125px auto;
     font-size: 40px;
     font-weight: bold;
     line-height: normal;
+    -webkit-animation: introTitleFadeOut .5s forwards;
+    animation: introTitleFadeOut .5s forwards;
+}
+
+@-webkit-keyframes introTitleFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes introTitleFadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 .fairies-kv .fairies-intro .intro-content {
@@ -772,41 +873,85 @@ body {
 
 @media(min-width:768px) {
     .fairies-kv li.active .fairies-intro .intro-title {
+        -webkit-transform: translateY(100%);
         transform: translateY(100%);
         opacity: 0;
+        -webkit-animation: introTitle 1.5s forwards;
         animation: introTitle 1.5s forwards;
+        -webkit-animation-delay: .5s;
         animation-delay: .5s;
     }
 
-    @keyframes introTitle {
+    @-webkit-keyframes introTitle {
         0% {
+            -webkit-transform: translateY(100%);
             transform: translateY(100%);
             opacity: 0;
         }
 
         50% {
+            -webkit-transform: translateY(100%);
             transform: translateY(100%);
             opacity: 1;
         }
 
         100% {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes introTitle {
+        0% {
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        50% {
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            opacity: 1;
+        }
+
+        100% {
+            -webkit-transform: translateY(0);
             transform: translateY(0);
             opacity: 1;
         }
     }
 
     .fairies-kv li.active .fairies-intro .intro-content {
+        -webkit-animation: introContent 1s forwards;
         animation: introContent 1s forwards;
+        -webkit-animation-delay: 1.3s;
         animation-delay: 1.3s;
     }
 
-    @keyframes introContent {
+    @-webkit-keyframes introContent {
         from {
+            -webkit-transform: translateY(100%);
             transform: translateY(100%);
             opacity: 0;
         }
 
         to {
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes introContent {
+        from {
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        to {
+            -webkit-transform: translateY(0);
             transform: translateY(0);
             opacity: 1;
         }
@@ -844,7 +989,7 @@ body {
 
     .fairies-kv .fairies-intro .intro-title {
         padding-left: 63px;
-        background-image: url(../images/Icon/Fairies-logo-b.png);
+        background-image: url(../images/Icon/Fairies-logo-b.svg);
         background-size: 53px auto;
         font-size: 18px;
         color: #000;
@@ -860,21 +1005,37 @@ body {
 
 
 /*-- fairies photos --*/
-.fairies-photos{
+.fairies-photos {
     opacity: 0;
 }
+
 .fairies-photos.fadeIn {
+    -webkit-animation: photoFadeIn .5s forwards;
     animation: photoFadeIn .5s forwards;
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
-@keyframes photoFadeIn{
-    from{
+
+@-webkit-keyframes photoFadeIn {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
+
+@keyframes photoFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .fairies-photos:after {
     content: "";
     display: block;
@@ -895,7 +1056,7 @@ body {
     right: 10px;
     width: 60px;
     height: 18px;
-    background: transparent url(../images/Icon/Fairies-logo.png) no-repeat center center;
+    background: transparent url(../images/Icon/Fairies-logo.svg) no-repeat center center;
     background-size: auto 100%;
     z-index: 1;
 }
@@ -903,10 +1064,12 @@ body {
 .fairies-photos .photos-img img {
     display: block;
     width: 100%;
+    -webkit-transition: .3s;
     transition: .3s;
 }
 
 .fairies-photos .photos-img:hover img {
+    -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
 
@@ -926,9 +1089,8 @@ body {
 }
 
 .fairies-promotions .item {
-    padding: 0px 15px 20px;
+    padding: 0px 15px 10px;
     height: auto;
-    min-height: 260px;
     text-align: left;
     background: #fff;
     color: #333;
