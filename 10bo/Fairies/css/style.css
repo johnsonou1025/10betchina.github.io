@@ -567,7 +567,7 @@ body {
     max-width: 1632px;
     margin: 0 auto;
     padding: 15px 0;
-    overflow: hidden;
+    overflow-y: hidden;
     box-sizing: border-box;
 }
 

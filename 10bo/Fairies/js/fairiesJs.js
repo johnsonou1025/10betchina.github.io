@@ -34,6 +34,7 @@ $(function() {
     changePhotos($(".fairies-nav li.active").index());
     $(".fairies-nav li").click(function() {
         if ($(this).hasClass("disable")) {} else {
+            $(".fairies-nav-inner").scrollLeft(0);
             $(this).addClass("active").siblings().removeClass("active");
             $(".fairies-kv li").removeClass("active").eq($(this).index()).addClass("active");
             navAnimtion();
