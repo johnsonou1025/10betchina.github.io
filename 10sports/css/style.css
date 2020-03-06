@@ -605,6 +605,10 @@ img {
 
 .single-article-n .article-title {
     font-size: 24px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
 }
 
 .single-article-n .article-content {
