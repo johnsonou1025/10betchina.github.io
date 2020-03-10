@@ -66,9 +66,19 @@
                             <h6>投票时间</h6>
                             <p>3月5日-3月8日</p>
                         </div>
-                        <div class="tr"><img src="images/icon-team/WnKdNmw06v2lz7HjhqPRPw_96x96.png" alt="">博洛尼亚<span>3月9日</span>
+                        <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>03:45</span></div>
+                        <div class="tr"><img src="images/icon-team/gpWqqaYc9yESzfkfspryoA_96x96.png" alt="">国际米兰<span>3月9日</span></div>
+                    </div>
+                </div>
+                <div class="gamelist-box">
+                    <div class="box-border">
+                        <div class="tr-time">
+                            <h6>投票时间</h6>
+                            <p>延期</p>
                         </div>
-                        <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>01:00</span>
+                        <div class="tr"><img src="images/icon-team/WnKdNmw06v2lz7HjhqPRPw_96x96.png" alt="">博洛尼亚<span>延期</span>
+                        </div>
+                        <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span></span>
                         </div>
                     </div>
                 </div>
@@ -76,19 +86,7 @@
                     <div class="box-border">
                         <div class="tr-time">
                             <h6>投票时间</h6>
-                            <p>3月9日-3月13日</p>
-                        </div>
-                        <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>3月14日</span>
-                        </div>
-                        <div class="tr"><img src="images/icon-team/tIaC5FB7Gm8CIULc77qMjg_96x96.png" alt="">莱切<span>03:45</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gamelist-box">
-                    <div class="box-border">
-                        <div class="tr-time">
-                            <h6>投票时间</h6>
-                            <p>3月14日-3月17日</p>
+                            <p>3月10日-3月17日</p>
                         </div>
                         <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>3月18日</span>
                         </div>
@@ -100,11 +98,11 @@
                     <div class="box-border">
                         <div class="tr-time">
                             <h6>投票时间</h6>
-                            <p>3月18日-3月21日</p>
+                            <p>延期</p>
                         </div>
-                        <div class="tr"><img src="images/icon-team/GlyoZO04xkwVX6oTh8asHA_96x96.png" alt="">热那亚<span>3月22日</span>
+                        <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>延期</span>
                         </div>
-                        <div class="tr"><img src="images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png" alt="">尤文图斯<span>01:00</span>
+                        <div class="tr"><img src="images/icon-team/tIaC5FB7Gm8CIULc77qMjg_96x96.png" alt="">莱切<span></span>
                         </div>
                     </div>
                 </div>
@@ -232,9 +230,9 @@
 <div class="sponsership-section">
     <div class="container">
         <div class="sponsership-item">
-            <a href="javascript:void(0)" class="logo-juventus"></a>
-            <a href="javascript:void(0)" class="logo-DDI"></a>
-            <a href="javascript:void(0)" class="logo-blackburn"></a>
+<!--            <a href="javascript:void(0)" class="logo-juventus"></a>-->
+<!--            <a href="javascript:void(0)" class="logo-DDI"></a>-->
+<!--            <a href="javascript:void(0)" class="logo-blackburn"></a>-->
         </div>
     </div>
 </div>
@@ -448,35 +446,35 @@
 <!-- popup terms end -->
 <script>
     $(function () {
-        // now = new Date('2020/03/5');
+        // now = new Date('2020/03/18');
         var game, bet, balls;
         var game1 = new Date('2020/03/04 23:59:59');
         var game2 = new Date('2020/03/08 23:59:59');
-        var game3 = new Date('2020/03/13 23:59:59');
+        // var game3 = new Date('2020/03/13 23:59:59');
         var game4 = new Date('2020/03/17 23:59:59');
-        var game5 = new Date('2020/03/21 23:59:59');
+        // var game5 = new Date('2020/03/21 23:59:59');
 
         if (now < game1) {
             console.log('game1');
             game = 1;
         } else if (now < game2) {
             console.log('game2');
-            $('.game-team img')[0].src = 'images/icon-team/WnKdNmw06v2lz7HjhqPRPw_96x96.png';
-            $('.game-team p')[0].innerText = '博洛尼亚';
-            $('.game-team img')[1].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
-            $('.game-team p')[3].innerText = '尤文图斯';
-            $('.draw-info h4').html('03/09<br clear="show-sm">01:00');
-            $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/italy-serie-a/20200308/bologna-vs-juventus');
-            game = 2;
-        } else if (now < game3) {
-            console.log('game3');
             $('.game-team img')[0].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
             $('.game-team p')[0].innerText = '尤文图斯';
-            $('.game-team img')[1].src = 'images/icon-team/tIaC5FB7Gm8CIULc77qMjg_96x96.png';
-            $('.game-team p')[3].innerText = '莱切';
-            $('.draw-info h4').html('03/14<br clear="show-sm">03:45');
-            $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/italy-serie-a/20200313/juventus-vs-lecce');
-            game = 3;
+            $('.game-team img')[1].src = 'images/icon-team/gpWqqaYc9yESzfkfspryoA_96x96.png';
+            $('.game-team p')[3].innerText = '国际米兰';
+            $('.draw-info h4').html('03/09<br clear="show-sm">03:45');
+            $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/意大利甲组联赛/20200308/尤文图斯-vs-国际米兰');
+            game = 2;
+        // } else if (now < game3) {
+        //     console.log('game3');
+        //     $('.game-team img')[0].src = 'images/icon-team/WnKdNmw06v2lz7HjhqPRPw_96x96.png';
+        //     $('.game-team p')[0].innerText = '博洛尼亚';
+        //     $('.game-team img')[1].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
+        //     $('.game-team p')[3].innerText = '尤文图斯';
+        //     $('.draw-info h4').html('03/14<br clear="show-sm">03:45');
+        //     $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/意大利甲组联赛/20200313/博洛尼亚-vs-尤文图斯');
+        //     game = 3;
         } else if (now < game4) {
             console.log('game4');
             $('.game-team img')[0].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
@@ -484,22 +482,27 @@
             $('.game-team img')[1].src = 'images/icon-team/SrKK55dUkCxe4mJsyshfCg_96x96.png';
             $('.game-team p')[3].innerText = '里昂';
             $('.draw-info h4').html('03/18<br clear="show-sm">04:00');
-            $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/champions-league/20200317/juventus-vs-lyon');
+            $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/欧洲冠军杯/20200317/尤文图斯-vs-里昂');
             game = 4;
+        // } else if(now < game5 ) {
+        //     $('.game-team img')[0].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
+        //     $('.game-team p')[0].innerText = '尤文图斯';
+        //     $('.game-team img')[1].src = 'images/icon-team/tIaC5FB7Gm8CIULc77qMjg_96x96.png';
+        //     $('.game-team p')[3].innerText = '莱切';
+        //     $('.draw-info h4').html('03/22<br clear="show-sm">03:45');
+        //     $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/意大利甲组联赛/20200321/尤文图斯-vs-莱切');
+        //     game = 5;
         } else {
-            $('.game-team img')[0].src = 'images/icon-team/GlyoZO04xkwVX6oTh8asHA_96x96.png';
-            $('.game-team p')[0].innerText = '热那亚';
-            $('.game-team img')[1].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
-            $('.game-team p')[3].innerText = '尤文图斯';
-            $('.draw-info h4').html('03/22<br clear="show-sm">01:00');
-            $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/italy-serie-a/20200321/genoa-vs-juventus');
-            game = 5;
-            if (now < game5) {
-                console.log('game5');
-            } else {
-                console.log('game end');
-                $('.game-guess-wrap .btn.popup-open.btn-primary').addClass('btn-disable');
-            }
+            $('.game-team img')[0].src = 'images/icon-team/Lv6xmBlUIpN3GAFhtf6nqQ_96x96.png';
+            $('.game-team p')[0].innerText = '尤文图斯';
+            $('.game-team img')[1].src = 'images/icon-team/SrKK55dUkCxe4mJsyshfCg_96x96.png';
+            $('.game-team p')[3].innerText = '里昂';
+            $('.draw-info h4').html('03/18<br clear="show-sm">04:00');
+            $('.1x2').attr('href', 'https://www.10bo16.com/?p=足球赛事/欧洲冠军杯/20200317/尤文图斯-vs-里昂');
+            game = 4;
+
+            console.log('game end');
+            $('.game-guess-wrap .btn.popup-open.btn-primary').addClass('btn-disable');
         }
 
         // hostname = 'http://localhost:8000';
