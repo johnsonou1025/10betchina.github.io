@@ -225,7 +225,7 @@
                     <p>直接获取第一手最新足球和篮球新闻，立即订阅我们的新闻邮件</p>
                     <div class="form-wrap form-subs">
                         <input type="text">
-                        <button class="btn btn-primary">订阅</button>
+                        <button class="btn btn-primary popup-open">订阅</button>
                     </div>
                 </div>
                 <div class="col-1"></div>
@@ -235,6 +235,23 @@
         </div>
     </div>
     <!-- footer end -->
+    <!-- popup -->
+    <div class="popup">
+        <div class="popup-content">
+            <div class="popup-close">X</div>
+            订阅成功！
+        </div>
+    </div>
+    <script>
+    // popup
+    $(".popup-open").click(function() {
+        $(".popup").addClass("show");
+    })
+    $(".popup").click(function() {
+        $(".popup").removeClass("show");
+    })
+    </script>
+    <!-- popup end-->
 </body>
 
 </html>

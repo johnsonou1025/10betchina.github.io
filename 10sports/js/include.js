@@ -15,4 +15,11 @@ $(function() {
     $(".pager").load("template.html .pager")
     $(".score-rank").load("template.html .score-rank>")
     $(".footer").load("template.html .footer>")
+    // popup
+    $(".popup-open").click(function(){
+        $(".popup").addClass("show");
+    })
+    $(".popup").click(function(){
+        $(".popup").removeClass("show");
+    })
 })
