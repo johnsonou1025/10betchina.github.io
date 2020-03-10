@@ -737,6 +737,16 @@ img {
 .table td.more {
     background: #eee;
 }
+.table td.team-name{
+    text-align: left;
+}
+.table td.team-name img{
+    display: inline-block;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    vertical-align: middle;
+}
 
 .score-rank-all tr+tr {
     border-top: 1px solid #ddd;
