@@ -3,6 +3,11 @@ $(function() {
     $(".fairies-photos .photos-img").click(function() {
         $(".popup-wrap").addClass("active");
         $(".slider-photos li").eq($(this).index(".photos-img")).addClass("active");
+        if($('html').hasClass('IsMobile')) {
+            $(".popup-wrap").css({'height':'713px'});
+            $("#mob-wrapper",window.parent.document).css({'height':'713px','overflow':'hidden'});
+            $(parent.window).scrollTop(0);  
+        }
     })
     // popup photo slider next
     $(".slider-photos .slider-next").click(function() {
@@ -26,6 +31,10 @@ $(function() {
     $(".popup-close").click(function() {
         $(".popup-wrap.active").removeClass("active");
         $(".slider-photos li").removeClass("active");
+        if($('html').hasClass('IsMobile')) {
+            $("#mob-wrapper",window.parent.document).css({'height':'auto','overflow':'auto'});  
+            // $("#rnd-iframe",window.parent.document).css({'height':'auto','overflow':'auto'});  
+        }
     })
 
     // nav animation
@@ -89,11 +98,11 @@ function changePhotos(num) {
     var photoNum = 1;
     var sliderNum = 1;
     $(".fairies-wrap .fairies-photos img").each(function() {
-        $(this).attr("src", "images/Photos/" + (num + 1) + "/Photos-" + photoNum + ".jpg");
+        $(this).attr("src", "https://content.100b108.com/fairies/images/Photos/" + (num + 1) + "/Photos-" + photoNum + ".jpg");
         photoNum++;
     })
     $(".fairies-wrap .slider-photos img").each(function() {
-        $(this).attr("src", "images/Photos/" + (num + 1) + "/Photos-" + sliderNum + ".jpg");
+        $(this).attr("src", "https://content.100b108.com/fairies/images/Photos/" + (num + 1) + "/Photos-" + sliderNum + ".jpg");
         sliderNum++;
     })
 }
