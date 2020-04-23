@@ -340,6 +340,7 @@ img {
 }
 
 .header-right {
+    display: none;
     float: right;
 }
 
